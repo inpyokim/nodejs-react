@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "react-scripts": "^0.9.5",
+    "request": "^2.88.0",
     "standard": "^10.0.2",
     "superagent": "^3.5.2"
   },

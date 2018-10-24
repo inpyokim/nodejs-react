@@ -18,5 +18,5 @@ class BMI {
   }
 }
 // 테스트
-const bmi = new BMI(160, 60)
-bmi.print()
+const bmi = new BMI(187.5, 98.3)
+bmi.print() 

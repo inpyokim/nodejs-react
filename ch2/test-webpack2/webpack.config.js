@@ -1,7 +1,8 @@
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: './out/bundle.js'
+    path: __dirname + '/out',
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -9,7 +10,7 @@ module.exports = {
         test: /.js$/,
         loader: 'babel-loader',
         options: {
-          presets:['es2015', 'react']
+          presets:['@babel/preset-env', '@babel/preset-react']
         }
       }
     ]

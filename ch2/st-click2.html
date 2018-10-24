@@ -11,22 +11,28 @@
         constructor (props) {
           super(props)
           // 이벤트 핸들러의 this를 설정합니다. --- (※1)
-          this.clickHandler = this.clickHandler.bind(this)
+          //this.clickHandler = this.clickHandler.bind(this)
+
+          this.state = { age: this.props.age }
+
+          setInterval((e) => {
+            this.setState({ age: parseInt(this.state.age)+1 })
+          }, 1000)
         }
         clickHandler (e) {
           const name = this.props.name
-          window.alert(`${name}님 안녕하세요.`)
+          window.alert(`${name}님 ${this.state.age}세 안녕하세요`)
         }
         render () {
           // 클릭 이벤트를 지정합니다. --- (※2)
           return (
-            <div onClick={this.clickHandler}>Click Me</div>
+            <div onClick={e => this.clickHandler()}>Click Me</div>
           )
         }
       }
       // 컴포넌트를 사용합니다.
       ReactDOM.render(
-        <Hello name="윤인성"/>,
+        <Hello name="윤인성" age="45"/>,
         document.getElementById('root'))
       </script>
 </body></html>

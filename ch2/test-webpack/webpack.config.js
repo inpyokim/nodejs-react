@@ -1,7 +1,9 @@
 module.exports = {
+  mode: 'development',
   entry: './main.js',
   output: {
-    filename: 'out/test.js'
+    filename: 'bundle.js',
+    path: __dirname + '/out'
   }
 };
 
